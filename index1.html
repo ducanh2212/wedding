@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thiệp cưới Văn Tùng & Thu Hương | 30/11/2025 • Luxury Palace</title>
+<meta name="description" content="Thiệp cưới online Văn Tùng & Thu Hương – Lễ thành hôn 30/11/2025 tại Luxury Palace, album, lời chúc Google Sheet, QR mừng cưới. Tông trắng & hồng hoa anh đào.">
+<meta property="og:title" content="Thiệp cưới Văn Tùng & Thu Hương">
+<meta property="og:description" content="Lễ cưới 30/11/2025 • Luxury Palace TP.HCM • Album • Sổ lưu bút • QR mừng cưới">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+
+<style>
+:root{
+  --pink:#ee7ea3; --pink-2:#fff1f6; --ink:#352a35; --edge:#efdae4;
+  --brand:#a14e73; --muted:#87627a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:#ebb3b3;color:var(--ink);font-family:Poppins,system-ui,Segoe UI,Roboto,Helvetica,Arial;scroll-behavior:smooth}
+img{max-width:100%;display:block;height:auto}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92vw);margin:0 auto}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #f3e6ec;backdrop-filter:saturate(140%) blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:10px 12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--brand)}
+.brand .logo{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--pink-2);border:1px solid #f1cbd9;color:var(--pink);font-weight:800}
+.nav ul{display:flex;gap:12px;list-style:none;margin:0;padding:0}
+.nav a{padding:8px 10px;border-radius:10px;color:#6e5063;font-weight:600}
+.nav a.active,.nav a:hover{color:#fff;background:var(--pink)}
+.menu-btn{display:none}
+
+/* SECTION BASE */
+section{padding:50px 0;position:relative;background:#fff}
+h1,h2{font-family:"Playfair Display",serif;color:var(--brand);text-align:center;margin:0 0 8px}
+h1{font-family:"Allura",cursive;color:var(--pink);font-size:clamp(46px,8.6vw,90px)}
+.lead{color:var(--muted);text-align:center;max-width:760px;margin:6px auto 0}
+
+/* HERO */
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center}
+.hero-media img{
+  width:100%;
+  height:100%;
+  max-height:82vh;               /* nhìn được tối đa màn hình */
+  aspect-ratio: 4/5;            /* khung dọc hợp ảnh cưới */
+  object-fit:contain;            /* HIỂN THỊ TRỌN ẢNH */
+  object-position:center;
+  border-radius:16px;
+  border:8px solid #fff;
+  box-shadow:0 18px 60px rgba(0,0,0,.12);
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px}
+.pill{border-radius:999px;border:1px dashed #efc6d8;background:var(--pink-2);padding:6px 10px;color:#a35a78;font-weight:700}
+
+/* 3 ảnh trái tim */
+.hearts-row{display:flex;justify-content:center;gap:10px;margin:10px 0 14px}
+.hearts-row img{
+  width:72px;height:72px;object-fit:cover;border-radius:50%;
+  border:3px solid #fff;box-shadow:0 0 10px rgba(239,113,151,.4);
+  transition:transform .28s ease, filter .28s ease;
+}
+.hearts-row img:hover{transform:scale(1.08);filter:saturate(1.1)}
+
+/* INVITE pastel 2 cột */
+.invite-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}
+.invite-left{border:1px solid #f6dbe6;border-radius:24px;box-shadow:0 10px 32px rgba(239,113,151,.12);padding:20px;background:linear-gradient(180deg,#fff6f9,#ffe8f0)}
+.invite-left .frame{border:1px dashed #f1cbd9;border-radius:20px;padding:20px;text-align:center}
+.dotdate{letter-spacing:.6em;color:#8a6a7d}
+.songhi{font-size:42px;color:#cc3f73;margin:8px 0}
+.invite-title{font-family:"Allura";color:#e76fa8;font-size:clamp(36px,6vw,64px);line-height:1.05;margin:6px 0}
+.invite-right{background:#fff;border:1px solid #f4dce7;border-radius:22px;padding:24px;box-shadow:0 12px 36px rgba(238,126,163,.12)}
+
+/* BLOCKS */
+.section-box{background:#fff;border:1px solid var(--edge);border-radius:16px;box-shadow:0 12px 36px rgba(238,126,163,.14);padding:16px}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+.card{background:#fff;border:1px solid var(--edge);border-radius:14px;padding:14px}
+.card h3{margin:0 0 6px;color:#8d4f6e;font-family:"Playfair Display",serif;text-transform:uppercase;letter-spacing:.06em}
+.badge{background:var(--pink-2);border:1px dashed #f1cbd9;padding:6px 10px;border-radius:999px;color:#a35a78;font-weight:700;display:inline-block;margin:4px}
+
+
+/* COUNTDOWN + CALENDAR */
+.count-wrap{background:#fff;border:1px solid var(--edge);border-radius:16px;padding:14px;box-shadow:0 10px 32px rgba(239,113,151,.1)}
+.cal{margin-top:6px}
+.cal .month{display:flex;gap:8px;align-items:center;justify-content:center;color:#b06a84;margin-bottom:6px}
+.cal table{width:100%;max-width:640px;margin:auto;border-collapse:collapse}
+.cal th,.cal td{padding:10px 8px;text-align:center;border-bottom:1px solid #f4eef1}
+.cal th{color:#806173;font-weight:700}
+.cal .mark{position:relative;font-weight:700;color:#d34f86}
+.cal .mark:before{
+  content:""; position:absolute; inset:0; margin:auto; width:34px; height:34px; border-radius:50%;
+  background:linear-gradient(180deg,#ffc7dc,#ffa7c7); opacity:.28;
+}
+.cal .mark:after{content:"❤"; color:#ee7ea3; font-size:14px; position:absolute; right:50%; transform:translate(8px,-12px);}
+.count{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:10px 0 0}
+.timebox{background:var(--pink-2);border:1px dashed #f1cbd9;border-radius:12px;padding:10px 12px;min-width:86px;text-align:center}
+.timebox b{display:block;color:var(--pink);font-size:28px}
+.under-time{margin-top:8px;color:#87627a;text-align:center}
+
+/* MAP */
+.map-wrap{margin-top:16px;border:1px solid #f4cbd8;border-radius:12px;overflow:hidden;box-shadow:0 10px 28px rgba(239,113,151,.12)}
+.map-wrap iframe{width:100%;height:330px;border:0}
+
+/* ALBUM */
+.album-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.album-grid figure{margin:0;border-radius:12px;overflow:hidden;border:6px solid #fff;box-shadow:0 12px 28px rgba(239,113,151,.14)}
+.album-grid img{width:100%;aspect-ratio:1/1;object-fit:cover}
+
+
+/* 🌸 WISHES */
+form.wish {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #f4cbd8;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(238,126,163,0.15);
+  padding: 20px;
+}
+form.wish input,
+form.wish select,
+form.wish textarea {
+  padding: 12px;
+  border: 1px solid #f4cbd8;
+  border-radius: 12px;
+  font-size: 15px;
+  background: #fffafc;
+}
+form.wish textarea {
+  grid-column: 1 / -1;
+  min-height: 110px;
+  resize: vertical;
+}
+form.wish button {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #ee7ea3, #e05f8d);
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(238,126,163,0.25);
+}
+form.wish button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(238,126,163,0.35);
+  background: linear-gradient(135deg, #e05f8d, #d44e7e);
+}
+#status {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #7a5265;
+}
+
+/* 🌸 Responsive fix (mobile đẹp) */
+@media (max-width: 760px) {
+  form.wish {
+    grid-template-columns: 1fr; /* từ 2 cột -> 1 cột */
+    gap: 10px;
+    padding: 16px;
+  }
+  form.wish button {
+    width: 100%;
+    border-radius: 50px;
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+/* 💝 Nút mở hộp mừng cưới */
+#gift .btn.pink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #ee7ea3, #e05f8d);
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: .4px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(238,126,163,.25);
+  transition: all .25s ease;
+}
+#gift .btn.pink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(238,126,163,.35);
+  background: linear-gradient(135deg, #e05f8d, #d44e7e);
+}
+
+/* 🎁 Cửa sổ QR mừng cưới – căn giữa, không văng */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.48);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 18px;
+  transition: opacity .3s ease;
+}
+.modal.active {
+  display: flex;
+  animation: fadeIn .3s ease;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(.98);}
+  to {opacity: 1; transform: scale(1);}
+}
+.modal-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.25);
+  max-width: 420px;
+  width: 100%;
+  padding: 24px;
+  position: relative;
+  text-align: center;
+  border: 1px solid #f1d5de;
+  animation: pop .35s ease;
+}
+@keyframes pop {
+  from {transform: scale(.96);opacity:0;}
+  to {transform: scale(1);opacity:1;}
+}
+.modal-card h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--brand);
+  margin-bottom: 14px;
+}
+.qr-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.qr {
+  border: 1px dashed #f4cbd8;
+  border-radius: 14px;
+  padding: 14px;
+  background: #fffafc;
+  box-shadow: 0 4px 14px rgba(239,113,151,.12);
+}
+.qr img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 6px;
+  border-radius: 10px;
+}
+.close {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--pink);
+  transition: .2s;
+}
+.close:hover {color: #d44e7e; transform: scale(1.1);}
+
+
+/* Music button */
+.music-btn{
+  position:fixed;bottom:18px;right:18px;z-index:99;
+  background:#fff;border:2px solid var(--pink);color:var(--pink);
+  width:48px;height:48px;border-radius:50%;font-size:22px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(239,113,151,.25);cursor:pointer;transition:.3s;
+}
+.music-btn:hover{background:var(--pink);color:#fff;transform:scale(1.05)}
+/* FOOTER */
+footer{padding:20px 16px;background:var(--pink-2);text-align:center;color:#7b7b7b}
+
+/* Petals (hoa anh đào rơi) */
+.petal{position:fixed;top:-8vh;width:14px;height:10px;opacity:.66;pointer-events:none;background:radial-gradient(10px 8px at 70% 40%,#fff 0 35%, var(--pink) 36% 100%);border-radius:60% 40% 60% 40%;animation:fall 14s linear infinite, sway 5s ease-in-out infinite;will-change:transform;z-index:5}
+@keyframes fall{0%{transform:translate3d(var(--x),-8vh,0) rotate(0)}100%{transform:translate3d(calc(var(--x) - 26vw),110vh,0) rotate(540deg)}}
+@keyframes sway{0%,100%{margin-left:0}50%{margin-left:12px}}
+
+/* Responsive: TRÊN DI ĐỘNG -> mỗi khối 1 hàng */
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr}
+  .invite-grid{grid-template-columns:1fr}
+  .info-grid{grid-template-columns:1fr}
+  .album-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .container{width:min(100%,94vw)}
+  section{padding:38px 0}
+  .nav ul{display:none}
+  .menu-btn{display:inline-flex;border:1px solid #f1cbd9;border-radius:10px;padding:8px 10px;color:var(--brand);background:#fff}
+  .nav.open ul{display:flex;flex-direction:column;position:absolute;top:54px;left:0;right:0;background:#fff;border-bottom:1px solid #f3e6ec;padding:10px}
+  .album-grid{grid-template-columns:1fr} /* để swipe gallery hiển thị từng ảnh */
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <nav class="nav container" aria-label="Điều hướng chính">
+    <div class="brand"><span class="logo">T♥H</span> Thiệp cưới</div>
+    <button class="menu-btn" id="menuBtn">☰ Menu</button>
+    <ul id="navLinks">
+      <li><a href="#home" class="nav-link active">Trang chủ</a></li>
+      <li><a href="#invite" class="nav-link">Lễ thành hôn</a></li>
+      <li><a href="#info" class="nav-link">Nhà trai / Nhà gái</a></li>
+      <li><a href="#venue" class="nav-link">Địa điểm</a></li>
+      <li><a href="#countdown" class="nav-link">Đếm ngược</a></li>
+      <li><a href="#album" class="nav-link">Album</a></li>
+      <li><a href="#wishes" class="nav-link">Lưu bút</a></li>
+      <li><a href="#gift" class="nav-link">Mừng cưới</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="home" aria-labelledby="heroTitle">
+  <div class="container hero-container">
+    <div class="hero-grid">
+      <article>
+        <h1 id="heroTitle" class="hero-title">Happy Wedding</h1>
+        <h2 style="margin:0 0 6px;color:var(--pink);font-family:Allura;font-size:clamp(36px,6vw,64px)">Văn Tùng ❤ Thu Hương</h2>
+
+        <!-- 3 ảnh trái tim -->
+        <div class="hearts-row">
+          <img src="./image/hoa-dao-vector-innkythuatso/hoa-dao-vector-inkythuatso-1.png" alt="Trái tim 1">
+          <img src="./image/hoa-dao-vector-innkythuatso/hoa-dao-vector-inkythuatso-3.png" alt="Trái tim 2">
+          <img src="./image/hoa-dao-vector-innkythuatso/hoa-dao-vector-inkythuatso-2.jpg" alt="Trái tim 3">
+        </div>
+
+        <p class="lead">Trân trọng kính mời Quý vị đến chung vui cùng gia đình chúng tôi trong ngày trọng đại.</p>
+        <div class="hero-actions">
+          <a class="btn pink" href="#invite">Xem nội dung thiệp</a>
+          <a class="btn" href="#wishes">Gửi lời chúc</a>
+          <a class="btn" href="#gift">Mừng cưới</a>
+        </div>
+      </article>
+
+      <!-- Ảnh hero: HIỂN THỊ TRỌN ẢNH + FADE-IN -->
+      <figure class="hero-media fade-img" aria-label="Ảnh cô dâu chú rể">
+        <img src="./image/daure/z7128117004807_888e5ce72f7aed2c442659f37dd4a85a.jpg" alt="Cô dâu chú rể" loading="eager">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- LỄ THÀNH HÔN (pastel 2 cột) -->
+<section id="invite" aria-labelledby="inviteTitle">
+  <div class="container invite-grid">
+    <div class="invite-left">
+      <div class="frame">
+        <div class="dotdate">3 0 &nbsp;|&nbsp; 1 1 &nbsp;|&nbsp; 2 5</div>
+        <div class="songhi">囍</div>
+        <h2 id="inviteTitle" class="invite-title">Văn Tùng &amp; Thu Hương</h2>
+        <p class="lead" style="max-width:420px;margin:8px auto;color:#7b5c70">
+          Trân trọng kính mời bạn đến chung vui cùng gia đình chúng tôi trong ngày trọng đại.
+        </p>
+        <div style="margin-top:12px"><a class="btn pink" href="#venue">SAVE THE DATE</a></div>
+      </div>
+    </div>
+
+    <div class="invite-right">
+      <h3 style="font-family:'Playfair Display';color:#8d4f6e;margin:0 0 10px">Trân trọng kính mời</h3>
+      <p style="color:#87627a;line-height:1.7">
+        Sau hành trình dài đầy yêu thương, lễ cưới sẽ được cử hành vào ngày
+        <b>Chủ nhật, 30 tháng 11 năm 2025</b>. Sự hiện diện của bạn là niềm vinh hạnh và nguồn động lực lớn lao đối với chúng tôi.
+      </p>
+      <hr style="border:none;height:1px;background:#f1e3ea;margin:14px 0">
+      <p><b>Trưởng nam:</b> LƯƠNG VĂN TÙNG</p>
+      <p><b>Trưởng nữ:</b> NGUYỄN THỊ THU HƯƠNG</p>
+      <p><b>Địa điểm:</b> HÔN LỄ ĐƯỢC CỬ HÀNH TẠI TƯ GIA</p>
+      <p><b>Thời gian:</b> 07:30 – CHỦ NHẬT | 30.11.2025</p>
+    </div>
+  </div>
+</section>
+
+<!-- NHÀ TRAI / NHÀ GÁI -->
+<section id="info" aria-labelledby="infoTitle">
+  <div class="container section-box">
+    <h2 id="infoTitle">Thông tin gia đình</h2>
+    <div class="info-grid">
+      <article class="card">
+        <h3>Nhà TRAI</h3>
+        <p>Con ông <b>Lương Văn Vinh</b><br>Đông Hòa, TP.HCM</p>
+      </article>
+      <article class="card">
+        <h3>Nhà GÁI</h3>
+        <p>Con ông <b>Nguyễn Thế Hải</b> &amp; bà <b>Lê Như Ngọc</b><br>Phường Hội An Tây, TP.HCM</p>
+      </article>
+    </div>
+     <div class="gallery">
+	
+    <img src="./image/daure/z7128117265349_64b4c990a89b2239d723f910a6bec6d1.jpg" alt="" />
+     </div>
+	  
+	</div>
+</div>
+  </div>
+</section>
+
+<!-- ĐỊA ĐIỂM TỔ CHỨC -->
+<section id="venue" aria-labelledby="venueTitle">
+  <div class="container section-box">
+    <h2 id="venueTitle">Địa điểm tổ chức</h2>
+    <p class="lead">Luxury Palace, Phường Hạnh Thông Tây, TP.HCM — không gian sang trọng, đội ngũ phục vụ tận tình.</p>
+    <div>
+      <span class="badge">💒 Sảnh Ruby</span>
+      <span class="badge">Đón khách: 11:00</span>
+      <span class="badge">Khai tiệc: 12:00</span>
+    </div>
+    <div style="margin-top:10px">
+      <a class="btn pink" target="_blank"
+         href="https://www.google.com/maps/place/Trung+T%C3%A2m+H%E1%BB%99i+Ngh%E1%BB%8B+%26+Ti%E1%BB%87c+C%C6%B0%E1%BB%9Bi+Luxury+Palace/">
+         MỞ GOOGLE MAPS
+      </a>
+    </div>
+    <div class="map-wrap">
+      <iframe title="Bản đồ Luxury Palace"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.704105290236!2d106.682!3d10.823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528f0ca02fed3%3A0xf31aedb8b09c47da!2sLuxury%20Palace!5e0!3m2!1svi!2sVN!4v1700000000000"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+<!-- LỊCH + ĐẾM NGƯỢC + VENUE (Luxury Palace) -->
+<section id="countdown" aria-labelledby="cdTitle">
+  <div class="container count-wrap">
+    <h2 id="cdTitle">Lịch tháng 11/2025 &amp; Đếm ngược</h2>
+
+    <!-- Lịch -->
+    <div class="cal" id="calendarGrid">
+      <div class="month"><span>Tháng <b id="mLabel">11</b>/<b id="yLabel">2025</b></span></div>
+      <table id="calTable" aria-label="Lịch tháng 5/2025"></table>
+    </div>
+
+    <!-- Giờ và đếm ngược -->
+    <p class="under-time">🕓 <b>11:00</b> Chủ nhật, ngày <b>30/11/2025</b> <span style="color:#a06b83">(Tức ngày 11/10 Ất Tỵ)</span></p>
+    <div class="count">
+      <div class="timebox"><b id="dd">00</b>Ngày</div>
+      <div class="timebox"><b id="hh">00</b>Giờ</div>
+      <div class="timebox"><b id="mm">00</b>Phút</div>
+      <div class="timebox"><b id="ss">00</b>Giây</div>
+    </div>
+
+   
+</section>
+
+<!-- ALBUM (Swipe gallery) -->
+<section id="album" aria-labelledby="albumTitle">
+  <div class="container">
+    <h2 id="albumTitle">Album cưới</h2>
+    <p class="lead">Kéo sang trái/phải để xem ảnh tiếp theo (trên điện thoại) • Ảnh ≤ 300KB để tải nhanh.</p>
+    <div class="album-grid swipe-scope">
+      <figure class="fade-img"><img src="./image/boy.jpg" alt="Album 1" loading="lazy" width="900" height="900"></figure>
+      <figure class="fade-img"><img src="./image/girl.jpg" alt="Album 2" loading="lazy" width="900" height="900"></figure>
+      <figure class="fade-img"><img src="album3.jpg" alt="Album 3" loading="lazy" width="900" height="900"></figure>
+      <figure class="fade-img"><img src="album4.jpg" alt="Album 4" loading="lazy" width="900" height="900"></figure>
+      <figure class="fade-img"><img src="album5.jpg" alt="Album 5" loading="lazy" width="900" height="900"></figure>
+      <figure class="fade-img"><img src="album6.jpg" alt="Album 6" loading="lazy" width="900" height="900"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- SỔ LƯU BÚT -->
+<section id="wishes" aria-labelledby="wishTitle">
+  <div class="container">
+    <h2 id="wishTitle">Sổ lưu bút</h2>
+    <p class="lead">Gửi lời chúc đến cô dâu &amp; chú rể — dữ liệu sẽ ghi trực tiếp vào Google Sheet.</p>
+    <form id="wishForm" class="wish section-box" autocomplete="on">
+      <input name="name" placeholder="Họ và tên" required>
+      <select name="side" aria-label="Bạn của">
+        <option>Bạn cô Dâu</option>
+        <option>Bạn chú Rể</option>
+        <option>Gia đình</option>
+      </select>
+      <textarea name="msg" placeholder="Nhập lời chúc của bạn..." required></textarea>
+      <select name="preset" aria-label="Gợi ý">
+        <option value="">Chọn lời chúc gợi ý (tuỳ chọn)</option>
+        <option>Trăm năm hạnh phúc!</option>
+        <option>Mãi bên nhau ❤️</option>
+        <option>Chúc sớm có thiên thần nhỏ 🍼</option>
+      </select>
+      <button type="submit">💌 Gửi lời chúc</button>
+    </form>
+    <div id="status" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- MỪNG CƯỚI -->
+<section id="gift" aria-labelledby="giftTitle">
+  <div class="container">
+    <h2 id="giftTitle">Mừng cưới</h2>
+    <p class="lead">Xin cảm ơn tấm lòng của Quý vị. Nhấn nút để mở hộp mừng cưới (QR).</p>
+    <div style="display:flex;justify-content:center">
+      <button class="btn pink" id="openGift">🎁 Mở hộp mừng cưới</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">© 2025 • MrDUCANH — Trân trọng cảm ơn!</div>
+</footer>
+
+<!-- MODAL QR -->
+<div class="modal" id="giftModal" aria-hidden="true">
+  <div class="modal-card">
+    <div class="close" id="closeGift">✕</div>
+    <h3 style="text-align:center;margin:6px 0 12px;color:#8d4f6e;font-family:'Playfair Display',serif">Hộp mừng cưới</h3>
+    <div class="qr-grid">
+      <div class="qr">
+        <h4 style="margin:6px 0;color:#a35a78">Chú rể</h4>
+        <img src="qr_chu_re.png" alt="QR chú rể">
+        <p>Vietcombank — STK <b>0123456789</b></p>
+      </div>
+      <div class="qr">
+        <h4 style="margin:6px 0;color:#a35a78">Cô dâu</h4>
+        <img src="qr_co_dau.png" alt="QR cô dâu">
+        <p>Techcombank — STK <b>0987654321</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NHẠC NỀN + NÚT -->
+<audio id="bgm" src="./mp3/Cuoi_Nhau_di.mp3" loop preload="auto"></audio>
+<button id="musicToggle" class="music-btn" aria-label="Bật/tắt nhạc">🔈</button>
+
+<script>
+/* ===== GSAP setup & reveals ===== */
+document.addEventListener('DOMContentLoaded', ()=>{
+  if (window.gsap){
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Fade-in tiêu đề / ảnh
+    gsap.utils.toArray(".fade-img").forEach(el=>{
+      gsap.from(el,{autoAlpha:0,scale:0.97,duration:0.9,ease:"power2.out",
+        scrollTrigger:{trigger:el,start:"top 90%"}});
+    });
+
+    // Swipe gallery (GSAP Observer)
+    if (window.Observer){
+      const album = document.querySelector(".album-grid");
+      if(album){
+        const items = [...album.querySelectorAll("figure")];
+        let current = 0;
+        const show = (i)=>{
+          items.forEach((f,idx)=>f.style.display = (idx===i)?'block':'none');
+          gsap.fromTo(items[i],{autoAlpha:0,scale:0.96},{autoAlpha:1,scale:1,duration:.45,ease:"power2.out"});
+        };
+        // Hiển thị chỉ 1 ảnh khi nhỏ, nhiều ảnh khi desktop
+        const updateLayout=()=>{
+          if (matchMedia("(max-width: 760px)").matches){
+            show(current);
+          } else {
+            items.forEach(f=>f.style.display='block');
+          }
+        };
+        updateLayout();
+        window.addEventListener('resize',updateLayout);
+
+        Observer.create({
+          target: album,
+          type: "touch,pointer",
+          tolerance: 8,
+          onLeft: ()=>{ if (matchMedia("(max-width: 760px)").matches){ current=(current+1)%items.length; show(current);} },
+          onRight:()=>{ if (matchMedia("(max-width: 760px)").matches){ current=(current-1+items.length)%items.length; show(current);} },
+        });
+      }
+    }
+  }
+
+  // Hoa anh đào rơi
+  const N=Math.min(24,Math.max(14,Math.floor(innerWidth/44)));
+  for(let i=0;i<N;i++){
+    const p=document.createElement('div'); p.className='petal';
+    const s=10+Math.random()*10; p.style.width=s+'px'; p.style.height=(s*.72)+'px';
+    p.style.left=Math.random()*100+'vw'; p.style.animationDelay=(Math.random()*-14)+'s';
+    p.style.animationDuration=(12+Math.random()*6)+'s'; p.style.opacity=(0.35+Math.random()*0.4).toFixed(2);
+    p.style.setProperty('--x',(Math.random()*100)+'vw'); document.body.appendChild(p);
+  }
+});
+
+/* Build calendar Nov 2025 (mark 30) */
+(function buildCalendar(){
+  const year=2025, month=11; // May
+  const table=document.getElementById('calTable');
+  const first=new Date(year, month-1, 1);
+  const startDay=(first.getDay()+6)%7; // Mon=0
+  const days=new Date(year, month, 0).getDate();
+  let html='<thead><tr><th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th><th>Thứ 5</th><th>Thứ 6</th><th>Thứ 7</th><th>CN</th></tr></thead><tbody><tr>';
+  for(let i=0;i<startDay;i++) html+='<td></td>';
+  for(let d=1; d<=days; d++){
+    const mark = (d===30) ? ' class="mark"' : '';
+    html+=`<td${mark}>${d}</td>`;
+    if( (d+startDay)%7===0 && d!==days ) html+='</tr><tr>';
+  }
+  const remaining=(7-((days+startDay)%7))%7;
+  for(let i=0;i<remaining;i++) html+='<td></td>';
+  html+='</tr></tbody>';
+  table.innerHTML=html;
+})();
+
+/* Countdown tới 30/11/2025 09:30 (VN) */
+const target = new Date("2025-11-30T11:00:00+07:00");
+function tick(){
+  const now=new Date(); let s=Math.max(0, Math.floor((target-now)/1000));
+  const d=Math.floor(s/86400); s%=86400;
+  const h=Math.floor(s/3600); s%=3600;
+  const m=Math.floor(s/60); s%=60;
+  document.getElementById('dd').textContent=String(d).padStart(2,'0');
+  document.getElementById('hh').textContent=String(h).padStart(2,'0');
+  document.getElementById('mm').textContent=String(m).padStart(2,'0');
+  document.getElementById('ss').textContent=String(s).padStart(2,'0');
+}
+tick(); setInterval(tick,1000);
+
+/* ===== Menu mobile ===== */
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.querySelector('.nav');
+menuBtn?.addEventListener('click',()=>nav.classList.toggle('open'));
+
+/* ===== Scroll-spy ===== */
+const links=[...document.querySelectorAll('.nav-link')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const spy=new IntersectionObserver((ents)=>{
+  ents.forEach(ent=>{
+    if(ent.isIntersecting){
+      links.forEach(l=>l.classList.toggle('active', l.getAttribute('href')==='#'+ent.target.id));
+    }
+  });
+},{rootMargin:"-45% 0px -50% 0px",threshold:0.02});
+secs.forEach(sec=>sec&&spy.observe(sec));
+
+/* ===== Gift modal ===== */
+const gift=document.getElementById('giftModal');
+document.getElementById('openGift').addEventListener('click',()=>{
+  gift.classList.add('active');
+  if(window.gsap){gsap.fromTo('.modal-card',{y:28,autoAlpha:0},{y:0,autoAlpha:1,duration:.32})}
+});
+document.getElementById('closeGift').addEventListener('click',()=>gift.classList.remove('active'));
+gift.addEventListener('click',e=>{if(e.target===gift) gift.classList.remove('active')});
+
+/* ===== Lưu bút → Google Sheet ===== */
+const sheetURL="https://script.google.com/macros/s/AKfycbyg96vgvDFM_a1W709wEN8Q1tG9GB_k5Lzju1QPt4dblPGCBvmVGwINX7guWhOwiCD3NQ/exec";
+const form=document.getElementById('wishForm'); const statusBox=document.getElementById('status');
+form?.addEventListener('submit', async e=>{
+  e.preventDefault();
+  const data=Object.fromEntries(new FormData(form).entries());
+  statusBox.style.color='#8a5672'; statusBox.textContent='⏳ Đang gửi lời chúc...';
+  try{
+    const res=await fetch(sheetURL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    if(!res.ok) throw new Error('Network');
+    statusBox.style.color='green'; statusBox.textContent='✅ Gửi thành công! Cảm ơn bạn 💕';
+    form.reset();
+  }catch(err){
+    statusBox.style.color='#b00020'; statusBox.textContent='❌ Không gửi được! Vui lòng thử lại.';
+  }
+});
+
+/* ===== Music autoplay (theo policy) + toggle ===== */
+const bgm=document.getElementById('bgm');
+const musicBtn=document.getElementById('musicToggle');
+let musicOn=false;
+const tryPlay=async (unmute=false)=>{
+  try{
+    if(unmute) bgm.muted=false;
+    await bgm.play();
+    musicOn=true; musicBtn.textContent='🔈';
+  }catch{}
+};
+// Bắt đầu nhẹ nhàng sau 2s, muted (để hầu hết trình duyệt cho phép), mở tiếng khi người dùng tương tác
+setTimeout(()=>{bgm.muted=true; tryPlay(false);},1800);
+['click','touchstart','keydown'].forEach(evt=>document.addEventListener(evt,()=>{ if(!musicOn){ tryPlay(true);} },{once:true}));
+
+musicBtn.addEventListener('click',()=>{
+  if(musicOn){ bgm.pause(); musicOn=false; musicBtn.textContent='🔇'; }
+  else{ tryPlay(true); }
+});
+</script>
+</body>
+</html>
